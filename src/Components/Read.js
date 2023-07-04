@@ -60,11 +60,10 @@ const Read = () => {
             <th scope="col"></th>
           </tr>
         </thead>
-        {data.map((eachData) => {
-          return (
-            <>
-              <tbody>
-                <tr>
+        <tbody>
+          {
+            data.map((eachData,index)=>{
+              return  <tr key={eachData.id}>
                   <th scope="row">{eachData.id}</th>
                   <td>{eachData.name}</td>
                   <td>{eachData.email}</td>
@@ -93,10 +92,9 @@ const Read = () => {
                     </button>
                   </td>
                 </tr>
-              </tbody>
-            </>
-          );
-        })}
+            })
+          }
+        </tbody>
       </table>
     </>
   );
